@@ -11,14 +11,14 @@ def get_comp():
     encoded : matching components to encoded version
     """
     
-    standard = {35: 'kick', 38: 'snare', 
+    standard = {36: 'kick', 38: 'snare', 
                 46: 'open hi-hat', 42: 'closed hi-hat', 
-                50: 'high tom', 48: 'mid tom', 45: 'low tom', 
+                50: 'high tom', 47: 'low-mid tom', 43: 'high floor tom', 
                 49: 'crash', 51: 'ride'}
     
     encoded = {'kick': 0, 'snare': 1, 
                'open hi-hat': 2, 'closed hi-hat': 3, 
-               'high tom': 4, 'mid tom': 5, 'low tom': 6, 
+               'high tom': 4, 'mid tom': 5, 'high floor tom': 6, 
                'crash': 7, 'ride': 8}
     
     return standard, encoded
@@ -42,13 +42,15 @@ def map_unique_drum(note):
     standard, encoded = get_comp()
     
     # partial mapping
-    map_to_standard = {36: 35, # kick 
-                       37: 38, 39: 48, 40: 38,# snare
-                       44: 42, # closed hi-hat
-                       41: 45, 43: 45, # low tom
-                       47: 48, # mid tom
-                       55: 49, 57: 49, # crash
-                       59: 51} #ride
+    map_to_standard = { # kick 
+                       37: 38, 40: 38,# snare
+                       26: 46, #open hi-hat
+                       44: 42, 22: 42, # closed hi-hat
+                       48:50, #high tom
+                       45: 47, # low-mid tom
+                       58: 43, # high floor tom
+                       55: 49, 57: 49, 52: 49, # crash
+                       59: 51, 53: 51} #ride
     
     if pitch not in standard.keys():
         if pitch in map_to_standard.keys():
