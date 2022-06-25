@@ -187,6 +187,7 @@ class Conductor(nn.Module):
         
         self.norm = nn.BatchNorm1d(input_size)
         self.linear = nn.Linear(hidden_size, hidden_size)
+        self.activation = nn.Tanh()
         self.conductor = nn.LSTM(batch_first=True,
                                  input_size=input_size,
                                  hidden_size=hidden_size,
@@ -226,7 +227,7 @@ class Conductor(nn.Module):
             feat[:, i, :] = z_input.squeeze()
             z_input = z
             
-        feat = self.linear(feat)
+        feat = self.activation(self.linear(feat))
             
         return feat
     
