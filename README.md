@@ -7,15 +7,14 @@
 
 input
 
-<audio controls>
-<source src='./result/input.mp4'>
-</audio>
+https://user-images.githubusercontent.com/52961246/175804062-280a33b0-0d1d-4aac-927d-407f78a7f3cf.mp4
+
+
 
 output
 
-<audio controls>
-<source src='./result/output.mp4'>
-</audio>
+https://user-images.githubusercontent.com/52961246/175804070-ff83e3ad-bc61-4051-89fa-56afb9fa6c55.mp4
+
 
 ## 2. Preparation
 ### 2.1 Prerequisites
