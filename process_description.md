@@ -56,7 +56,7 @@ Unidirectional LSTM이용한다. 마디별로 존재하는 conductor output을 �
 
 ## Loss
 ___
-MusicVAE는 KL divergence의 최소화를 기반으로 posterior($p(z|x)$)를 찾는다. Encoder의 분포가 $z \sim q_{\lambda}(z|x)$를 따르고, decoder는 $z \sim p(z)$, $x\sim p(x|z)$를 따른다고 하자. 이떄 KL divergence는 아래와 같다.
+MusicVAE는 KL divergence의 최소화를 기반으로 posterior( $p(z|x)$ )를 찾는다. Encoder의 분포가 $z \sim q_{\lambda}(z|x)$를 따르고, decoder는 $z \sim p(z)$, $x\sim p(x|z)$를 따른다고 하자. 이떄 KL divergence는 아래와 같다.
 $$KL(q_{\lambda}(z|x)||p(z|x)) = E[\log q_{\lambda}(z|x)-\log p(z|x)]$$
 이 식을 베이즈 정리와 KL divergence는 항상 양수라는 점을 이용해 정리하면 아래와 같다.
 $$E[\log p_{\theta}(x|z)]-KL(q_{\lambda}(z|x)||p(x)) \leq \log p(x)$$
