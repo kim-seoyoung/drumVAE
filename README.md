@@ -8,13 +8,13 @@
 input
 
 <audio controls>
-<source src='./result/input.wav'>
+<source src='./result/input.mp4'>
 </audio>
 
 output
 
 <audio controls>
-<source src='./result/output.wav'>
+<source src='./result/output.mp4'>
 </audio>
 
 ## 2. Preparation
