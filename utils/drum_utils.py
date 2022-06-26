@@ -18,7 +18,7 @@ def get_comp():
     
     encoded = {'kick': 0, 'snare': 1, 
                'open hi-hat': 2, 'closed hi-hat': 3, 
-               'high tom': 4, 'mid tom': 5, 'high floor tom': 6, 
+               'high tom': 4, 'low-mid tom': 5, 'high floor tom': 6, 
                'crash': 7, 'ride': 8}
     
     return standard, encoded
